@@ -1,0 +1,14 @@
+#Tower Of Hanoi
+
+A = [3,2,1]
+B = []
+C = []
+
+def hanoi(n, src, dest, tmp):
+    if n > 0:
+        hanoi(n-1, src, tmp, dest)
+        dest.append(src.pop())
+        print(A,B,C)
+        hanoi(n-1, tmp, dest, src)
+    
+hanoi(len(A), A, C, B)
